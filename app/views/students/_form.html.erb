@@ -1,0 +1,254 @@
+<div class="container">
+<%= form_for(@student) do |f| %>
+  <% if @student.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@student.errors.count, "error") %> prohibited this student from being saved:</h2>
+
+      <ul>
+      <% @student.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+ <div style="float:left;">
+  <h3 style="text-align: center;"><u>Personal Information</u></h3><br>
+  <table>
+    <tbody>
+    <tr>
+      <th><%= f.label :name , :value => 'English Name' %></th>
+      <th><%= f.label :namej , :value => 'Japanese Name' %></th>
+      <th><%= f.label :namek , :value => 'Khmer Name' %></th>
+    </tr>
+    <tr>
+      <td style="padding-right:100px; width: 400px;"><%= f.text_field :name, class:'form-control' %></td>
+      <td style="padding-right:100px; width: 400px;"><%= f.text_field :namej, class:'form-control' %></td>
+      <td style="padding-right:100px; width: 400px;"><%= f.text_field :namek, class:'form-control' %></td>
+    </tr>
+   </tbody>
+  </table>
+  <div class="field" >
+    <%= f.label :nationality %>
+    <%= f.text_field :nationality %>
+  </div>
+  <div class="field" >
+    <%= f.label :place , :value => 'Place of Birth' %>
+    <%= f.text_field :place %>
+  </div>
+  <div class="field" >
+    <%= f.label :idcard , :value => 'Card ID' %>
+    <%= f.text_field :idcard %>
+  </div>
+  <div class="field" >
+    <%= f.label :salary , :value => 'In Khmer Salary' %>
+    <%= f.text_field :salary %>
+  </div><br>
+  <div class="field">
+    <%= f.label :education %><br>
+    <%= f.text_field :education %>
+  </div>
+  <div class="field">
+    <%= f.label :dbirth , :value => 'Date of Birth'%><br>
+    <%= f.date_select :dbirth %>
+  </div>
+  <div class="field">
+    <%= f.label :age %><br>
+    <%= f.number_field :age %>
+  </div>
+  <div class="field">
+    <%= f.label :sex %><br>
+    <%= f.text_field :sex %>
+  </div>
+  <div class="field">
+    <%= f.label :health, :value => 'State of Health' %><br>
+    <%= f.text_field :health %>
+  </div>
+  <div class="field">
+    <%= f.label :blood , :value => 'Blood Type'%><br>
+    <%= f.text_field :blood %>
+  </div>
+  <div class="field">
+    <%= f.label :vision %><br>
+    <%= f.text_field :vision %>
+  </div>
+  <div class="field">
+    <%= f.label :interest %><br>
+    <%= f.text_area :interest %>
+  </div>
+  <div class="field">
+    <%= f.label :experience , :value => 'Year of Experience' %><br>
+    <%= f.number_field :experience %>
+  </div>
+  <div class="field">
+    <%= f.label :married %><br>
+    <%= f.text_field :married %>
+  </div>
+  <div class="field">
+    <%= f.label :position %><br>
+    <%= f.text_field :position %>
+  </div>
+  <div class="field">
+    <%= f.label :behavior %><br>
+    <%= f.text_area :behavior %>
+  </div>
+  <div class="field">
+    <%= f.label :experiencetojapan , :value => 'Experience go to Japanese'%><br>
+    <%= f.text_field :experiencetojapan %>
+  </div>
+  <div class="field">
+    <%= f.label :japanesespeaking , :value => 'Japanese Conversation'%><br>
+    <%= f.text_field :japanesespeaking %>
+  </div>
+  <div class="field">
+    <%= f.label :heightweight , :value => 'Height & Weight'%><br>
+    <%= f.text_field :heightweight %>
+  </div>
+  <div class="field">
+    <%= f.label :caddress %><br>
+    <%= f.text_area :caddress , :value => 'Current Address'%>
+  </div>
+  <h3 style="text-align: center;"><u>Academic History Information</u></h3>
+  <div class="field">
+    <%= f.label :dates , :value => 'Last Peroid of Studying'%><br>
+    <%= f.date_select :dates %>
+  </div>
+  <div class="field">
+    <%= f.label :schoolname , :value => 'Name Of School'%><br>
+    <%= f.text_field :schoolname %>
+  </div>
+  <div class="field">
+    <%= f.label :subjects , :value => 'Subjects or Major'%><br>
+    <%= f.text_field :subjects %>
+  </div>
+  <h3 style="text-align: center;"><u>Employee History Information</u></h3>
+  <div class="field">
+    <%= f.label :datess , :value => 'Last Peroid of Working' %><br>
+    <%= f.date_select :datess %>
+  </div>
+  <div class="field">
+    <%= f.label :emcompany , :value => 'Company Name'%><br>
+    <%= f.text_field :emcompany %>
+  </div>
+  <div class="field">
+    <%= f.label :positionl , :value => 'Position of Working'%><br>
+    <%= f.text_field :positionl %>
+  </div>
+  <h3 style="text-align: center;"><u>Famaily Member Information</u></h3>
+  <div class="field">
+    <%= f.label :fathername , :value => 'Father Name '%>
+    <%= f.text_field :fathername %>
+  </div>
+  <div class="field">
+    <%= f.label :fage , :value => 'Age'%>
+    <%= f.number_field :fage %>
+  </div>
+  <div class="field">
+    <%= f.label :fjob , :value => 'Jobs'%><br>
+    <%= f.text_field :fjob %>
+  </div>
+  <div class="field">
+    <%= f.label :mathername , :value => 'Mather Name'%>
+    <%= f.text_field :mathername %>
+  </div>
+  <div class="field">
+    <%= f.label :mage , :value => 'Age'%>
+    <%= f.number_field :mage %>
+  </div>
+  <div class="field">
+    <%= f.label :mjob , :value => 'Jobs'%><br>
+    <%= f.text_field :mjob %>
+  </div>
+  <div class="field">
+    <%= f.label :brothername , :value => 'Brother Name'%>
+    <%= f.text_field :brothername %>
+  </div>
+  <div class="field">
+    <%= f.label :bage , :value => 'Age' %>
+    <%= f.number_field :bage %>
+  </div>
+  <div class="field">
+    <%= f.label :bjob , :value => 'Jobs'%><br>
+    <%= f.text_field :bjob %>
+  </div>
+  <div class="field">
+    <%= f.label :sisname , :value => 'Sister Name' %>
+    <%= f.text_field :sisname %>
+  </div>
+  <div class="field">
+    <%= f.label :sage , :value => 'Age' %>
+    <%= f.text_field :sage %>
+  </div>
+  <div class="field">
+    <%= f.label :sjob , :value => 'Jobs' %><br>
+    <%= f.text_field :sjob %>
+  </div>
+  <div class="field">
+    <%= f.label :moreinformation , :value => 'Other Information'%><br>
+    <%= f.text_area :moreinformation %>
+  </div>
+  <h3 style="text-align: center;"><u>Reason of Go to Japan</u></h3>
+  <div class="field">
+    <%= f.label :reason , :value => 'Why do you want to go to Japan' %><br>
+    <%= f.text_area :reason %>
+  </div>
+  <h3 style="text-align: center;"><u>When return how to arrang the money.</u></h3>
+  <div class="field">
+    <%= f.label :arrang , :value => 'What will you do when you have money from Japan.' %><br>
+    <%= f.text_area :arrang %>
+  </div>
+  <h3 style="text-align: center;"><u>Reference of Resume</u></h3>
+  <div class="field">
+    <%= f.label :entrydate , :value => 'Date of Entry Data' %><br>
+    <%= f.datetime_select :entrydate %>
+  </div>
+  <div class="field">
+    <%= f.label :phone , :value => 'Phone Number'%><br>
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :email , :value => 'Email Address'%><br>
+    <%= f.text_field :email %>
+  </div>
+  <h3 style="text-align: center;"><u>Information of Going to Japan</u></h3>
+  <div class="field">
+    <%= f.label :sendingcompany, :value => 'Sending Company Name' %><br>
+    <%= f.text_area :sendingcompany %>
+  </div>
+  <div class="field">
+    <%= f.label :japaneselevel , :value => 'Japanese Level'%><br>
+    <%= f.text_field :japaneselevel %>
+  </div>
+  <div class="field">
+    <%= f.label :workfield , :value => 'Field of Work' %><br>
+    <%= f.text_area :workfield %>
+  </div>
+  <div class="field">
+    <%= f.label :dategojapan , :value => 'Date go to Japan'%><br>
+    <%= f.date_select :dategojapan %>
+  </div>
+  <div class="field">
+    <%= f.label :prefecture %><br>
+    <%= f.text_area :prefecture %>
+  </div>
+  <div class="field">
+    <%= f.label :zipcode %><br>
+    <%= f.text_field :zipcode %>
+  </div>
+  <div class="field">
+    <%= f.label :addressjapan , :value => 'Address in Japan'%><br>
+    <%= f.text_area :addressjapan %>
+  </div>
+  <div class="field">
+    <%= f.label :adminname , :value => 'Admin Name' %><br>
+    <%= f.text_field :adminname %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Save Data ' , class:'btn btn-sm btn-success'%>
+  </div>
+  </div>
+<% end %>
+</div>

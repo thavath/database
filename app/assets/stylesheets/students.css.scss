@@ -1,0 +1,50 @@
+// Place all the styles related to the Students controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.topnavbar{
+    width: 100%;
+    overflow: hidden;
+    background-color: #000033;
+    font-size: bold;
+    
+}
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000033;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: bold;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #4CAF50;}
+
+ul.topnav li a.active {background-color: #4CAF50;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px){
+    ul.topnav li.right, 
+    ul.topnav li {float: none;}
+}
+
+th {
+    text-align: center;
+}
+
+td {
+    text-align: center;
+    padding-top: 30px;
+    border-color: #00b33c;
+}

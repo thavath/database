@@ -1,0 +1,277 @@
+<div class="container" style="margin-top: 50px; font-size: 16px;">
+<p id="notice"><%= notice %></p>
+<h2><u>Detail Information of Student Name : </u><strong style="color: red"> ( <%= @student.name %> )</strong></h2><br>
+<div style="background-color:#ffe6e6; padding: 40px;">
+
+<table class="table table-bordered ">
+  <tbody >
+    <tr>
+      <th style="text-align:center;"><strong>English Name</strong></th>
+      <th style="text-align:center;"><strong>Japanese Name</strong></th>
+      <th style="text-align:center;"><strong>Khmer Name</strong></th>
+      <th style="text-align:center;"><strong>Image</strong></th>
+    </tr>
+    <tr>
+      <td style="height: 90px; padding-top: 30px;"><%= @student.name %></td>
+      <td style="height: 90px; padding-top: 30px;"><%= @student.namej %></td>
+      <td style="height: 90px; padding-top: 30px;"><%= @student.namek %></td>
+      <td style="height: 90px; padding-top: 30px;">4x6</td>
+    </tr>
+    
+    <tr>
+      <th style="text-align:center;"><strong>Nationality</strong></th>
+      <th style="text-align:center;"><strong>Place of Birth</strong></th>
+      <th style="text-align:center;"><strong>ID Card</strong></th>
+      <th style="text-align:center;"><strong>In Khmer Salary</strong></th>
+    </tr>
+    <tr>
+      <td style="height: 90px; padding-top: 30px;"><%= @student.nationality %></td>
+      <td style="height: 90px; padding-top: 30px;"><%= @student.place %></td>
+      <td style="height: 90px; padding-top: 30px;"><%= @student.idcard %></td>
+      <td style="height: 90px; padding-top: 30px;"><%= @student.salary %></td>
+    </tr>
+    
+    <tr>
+      <th style="text-align:center;"><strong>Education</strong></th>
+      <th style="text-align:center;"><strong>Date of Birth</strong></th>
+      <th style="text-align:center;"><strong>Age</strong></th>
+      <th style="text-align:center;"><strong>Sex</strong></th>
+    </tr>
+    <tr>
+      <td style="height: 90px; padding-top: 30px;"><%= @student.education %></td>
+      <td style="height: 90px; padding-top: 30px;"><%= @student.dbirth.to_formatted_s(:long_ordinal) %></td>
+      <td style="height: 90px; padding-top: 30px;"><%= @student.age %></td>
+      <td style="height: 90px; padding-top: 30px;"><%= @student.sex %></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+  <strong>State of Health:</strong>
+  <%= @student.health %>
+</p>
+
+<p>
+  <strong>Blood Type:</strong>
+  <%= @student.blood %>
+</p>
+
+<p>
+  <strong>Vision:</strong>
+  <%= @student.vision %>
+</p>
+
+<p>
+  <strong>Interest:</strong>
+  <%= @student.interest %>
+</p>
+
+<p>
+  <strong>Year of Experience:</strong>
+  <%= @student.experience %>
+</p>
+
+<p>
+  <strong>Married:</strong>
+  <%= @student.married %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @student.position %>
+</p>
+
+<p>
+  <strong>Behavior:</strong>
+  <%= @student.behavior %>
+</p>
+
+<p>
+  <strong>Experience Go To Japan:</strong>
+  <%= @student.experiencetojapan %>
+</p>
+
+<p>
+  <strong>Japaneses Conversation:</strong>
+  <%= @student.japanesespeaking %>
+</p>
+
+<p>
+  <strong>Height & Weight:</strong>
+  <%= @student.heightweight %>
+</p>
+
+<p>
+  <strong>Current Address:</strong>
+  <%= @student.caddress %>
+</p>
+
+<p>
+  <strong>Last Date:</strong>
+  <%= @student.dates %>
+</p>
+
+<p>
+  <strong>School Name:</strong>
+  <%= @student.schoolname %>
+</p>
+
+<p>
+  <strong>Subjects and Major:</strong>
+  <%= @student.subjects %>
+</p>
+
+<p>
+  <strong>Last Date:</strong>
+  <%= @student.datess %>
+</p>
+
+<p>
+  <strong>Employer company:</strong>
+  <%= @student.emcompany %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @student.positionl %>
+</p>
+
+<p>
+  <strong>Father's Name:</strong>
+  <%= @student.fathername %>
+</p>
+
+<p>
+  <strong>F_age:</strong>
+  <%= @student.fage %>
+</p>
+
+<p>
+  <strong>F_job:</strong>
+  <%= @student.fjob %>
+</p>
+
+<p>
+  <strong>Mather's Name:</strong>
+  <%= @student.mathername %>
+</p>
+
+<p>
+  <strong>M_age:</strong>
+  <%= @student.mage %>
+</p>
+
+<p>
+  <strong>M_job:</strong>
+  <%= @student.mjob %>
+</p>
+
+<p>
+  <strong>Brother's Name:</strong>
+  <%= @student.brothername %>
+</p>
+
+<p>
+  <strong>B_age:</strong>
+  <%= @student.bage %>
+</p>
+
+<p>
+  <strong>B_job:</strong>
+  <%= @student.bjob %>
+</p>
+
+<p>
+  <strong>Sister's name:</strong>
+  <%= @student.sisname %>
+</p>
+
+<p>
+  <strong>S_age:</strong>
+  <%= @student.sage %>
+</p>
+
+<p>
+  <strong>S_job:</strong>
+  <%= @student.sjob %>
+</p>
+
+<p>
+  <strong>Other Information:</strong>
+  <%= @student.moreinformation %>
+</p>
+
+<p>
+  <strong>Reason of Going to Japan:</strong>
+  <%= @student.reason %>
+</p>
+
+<p>
+  <strong>Arrang the Money:</strong>
+  <%= @student.arrang %>
+</p>
+
+<p>
+  <strong>Entry Date:</strong>
+  <%= @student.entrydate %>
+</p>
+
+<p>
+  <strong>Phone Number:</strong>
+  <%= @student.phone %>
+</p>
+
+<p>
+  <strong>Email Address:</strong>
+  <%= @student.email %>
+</p>
+
+<p>
+  <strong>Sending Company:</strong>
+  <%= @student.sendingcompany %>
+</p>
+
+<p>
+  <strong>Japanese Level:</strong>
+  <%= @student.japaneselevel %>
+</p>
+
+<p>
+  <strong>Field of Working:</strong>
+  <%= @student.workfield %>
+</p>
+
+<p>
+  <strong>Date Going to Japan:</strong>
+  <%= @student.dategojapan %>
+</p>
+
+<p>
+  <strong>Prefecture:</strong>
+  <%= @student.prefecture %>
+</p>
+
+<p>
+  <strong>Zip Code:</strong>
+  <%= @student.zipcode %>
+</p>
+
+<p>
+  <strong>Address In Japan:</strong>
+  <%= @student.addressjapan %>
+</p>
+
+<p>
+  <strong>Admin Entry Name:</strong>
+  <%= @student.adminname %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @student.description %>
+</p>
+<br>
+<%= link_to 'Edit', edit_student_path(@student) , class:'btn btn-sm btn-success' %> |
+<%= link_to 'Back', students_path , class:'btn btn-sm btn-primary' %>
+</div>
+</div>
