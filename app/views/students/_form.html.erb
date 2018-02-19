@@ -16,9 +16,9 @@
   <table>
     <tbody>
     <tr>
-      <th><%= f.label :name , :value => 'English Name' %></th>
-      <th><%= f.label :namej , :value => 'Japanese Name' %></th>
-      <th><%= f.label :namek , :value => 'Khmer Name' %></th>
+      <th><%= f.label :name , :value => 'English Name',class: 'label-input' %></th>
+      <th><%= f.label :namej , :value => 'Japanese Name',class: 'label-input' %></th>
+      <th><%= f.label :namek , :value => 'Khmer Name',class: 'label-input' %></th>
     </tr>
     <tr>
       <td style="padding-right:100px; width: 400px;"><%= f.text_field :name, class:'form-control' %></td>
@@ -105,7 +105,7 @@
   </div>
   <div class="field">
     <%= f.label :caddress %><br>
-    <%= f.text_area :caddress , :value => 'Current Address'%>
+    <%= f.text_area :caddress , placeholder: 'Current Address'%>
   </div>
   <h3 style="text-align: center;"><u>Academic History Information</u></h3>
   <div class="field">
@@ -246,9 +246,119 @@
     <%= f.label :description %><br>
     <%= f.text_area :description %>
   </div>
-  <div class="actions">
-    <%= f.submit 'Save Data ' , class:'btn btn-sm btn-success'%>
+  <h3 style="text-align: center;"><u>New Information of Student</u></h3>
+  <div>
+  <table>
+    <tbody>
+    <tr>
+      <th><%= f.label :course , :value => 'Course type',class: 'label-input' %></th>
+      <th><%= f.label :university, :value => 'University Name',class: 'label-input' %></th>
+      <th><%= f.label :subject , :value => 'Subject',class: 'label-input' %></th>
+    </tr>
+    <tr>
+      <td style="padding-right:100px; width: 400px;"><%= f.text_field :course, class:'form-control' %></td>
+      <td style="padding-right:100px; width: 400px;"><%= f.text_field :university, class:'form-control' %></td>
+      <td style="padding-right:100px; width: 400px;"><%= f.text_field :subject, class:'form-control' %></td>
+    </tr>
+   </tbody>
+  </table>
   </div>
+  <div>
+  <table>
+    <tbody>
+    <tr>
+      <th><%= f.label :teacher , :value => 'Japanese Teacher',class: 'label-input' %></th>
+      <th><%= f.label :dateentoll, :value => 'Start Date',class: 'label-input' %></th>
+      <th><%= f.label :dateend , :value => 'End Date',class: 'label-input' %></th>
+    </tr>
+    <tr>
+      <td style="padding-right:100px; width: 400px;"><%= f.text_field :teacher, class:'form-control' %></td>
+      <td style="padding-right:100px; width: 400px;"><%= f.date_select :dateentoll, class:'form-input' %><span class="glyphicon glyphicon-calendar btn-lg"></span></td>
+      <td style="padding-right:100px; width: 400px;"><%= f.date_select :dateend, class:'form-input' %><span class="glyphicon glyphicon-calendar btn-lg"></span></td>
+    </tr>
+   </tbody>
+  </table>
+  </div>
+  <div>
+  <table>
+    <tbody>
+    <tr>
+      <th><%= f.label :textbook , :value => 'Japanese Book',class: 'label-input' %></th>
+      <th><%= f.label :status, :value => 'Status of study',class: 'label-input' %></th>
+      <th><%= f.label :hisinterview , :value => 'History of Interview',class: 'label-input' %></th>
+    </tr>
+    <tr>
+      <td style="padding-right:100px; width: 400px;"><%= f.text_field :textbook, class:'form-control' %></td>
+      <td style="padding-right:100px; width: 400px;"><%= f.text_field :status, class:'form-control' %></td>
+      <td style="padding-right:100px; width: 400px;"><%= f.text_field :hisinterview, class:'form-control' %></td>
+    </tr>
+   </tbody>
+  </table>
+  </div>
+  <div>
+  <table>
+    <tbody>
+    <tr>
+      <th><%= f.label :stinterview , :value => 'Status of Interview' ,class: 'label-input' %></th>
+      <th><%= f.label :jobhistory, :value => 'Job History' ,class: 'label-input' %></th>
+      <th><%= f.label :certificate , :value => 'Certiticate', placeholder: 'English etc...' ,class: 'label-input' %></th>
+    </tr>
+    <tr>
+      <td style="padding-right:100px; width: 400px;"><%= f.text_field :stinterview, class:'form-control' %></td>
+      <td style="padding-right:100px; width: 400px;"><%= f.text_field :jobhistory, class:'form-control' %></td>
+      <td style="padding-right:100px; width: 400px;"><%= f.text_field :certificate, class:'form-control' %></td>
+    </tr>
+   </tbody>
+  </table>
+  </div>
+  <div>
+  <table>
+    <tbody>
+    <tr>
+      <th><%= f.label :japanesetype , :value => 'Status of Interview' ,class: 'label-input' %></th>
+      <th><%= f.label :valuation, :value => 'Valuation of Study' ,class: 'label-input' %></th>
+      <th><%= f.label :attendance , :value => 'Attendance', placeholder: 'English etc...' ,class: 'label-input' %></th>
+    </tr>
+    <tr>
+      <td style="padding-right:100px; width: 400px;"><%= f.text_field :japanesetype, class:'form-control' %></td>
+      <td style="padding-right:100px; width: 400px;"><%= f.text_field :valuation, class:'form-control' %></td>
+      <td style="padding-right:100px; width: 400px;"><%= f.date_select :attendance, class:'form-control' %><span class="glyphicon glyphicon-calendar btn-lg"></span></td>
+    </tr>
+   </tbody>
+  </table>
+  </div>
+  <div>
+    <h3 style="text-align: center;"><u>Fujiyama Programe</u></h3>
+  <table>
+    <tbody>
+    <tr>
+      <th><%= f.label :resgisterdate , :value => 'Entry Date' ,class: 'label-input' %></th>
+      <th><%= f.label :score, :value => 'Score' ,class: 'label-input' %></th>
+      <th><%= f.label :playingtime , :value => 'Playing Time',class: 'label-input' %></th>
+    </tr>
+    <tr>
+      <td style="padding-right:100px; width: 400px;"><%= f.date_select :resgisterdate, class:'form-control' %><span class="glyphicon glyphicon-calendar btn-lg"></span></td>
+      <td style="padding-right:100px; width: 400px;"><%= f.text_field :score, class:'form-control' %></td>
+      <td style="padding-right:100px; width: 400px;"><%= f.text_field :playingtime, class:'form-control' %></td>
+    </tr>
+   </tbody>
+  </table>
+  </div>
+  <table>
+    <tbody>
+      <tr>
+        <th><%= f.label :lastlearnhistory, :value => 'Last Learning History' ,class: 'label-input' %></th>
+      </tr>
+      <tr>
+        <td style="padding-right:100px; width: 1200px;"><%= f.text_field :lastlearnhistory, class:'form-control', placeholder: 'Last learning history' %></td>
+      </tr>
+    <tbody>
+  </table>
+  <br>
+  <div>
+  <div class="actions">
+    <%= f.submit 'Save Data Into List Of Student' , class:'btn btn-sm btn-success'%>
+  </div><br>
   </div>
 <% end %>
 </div>

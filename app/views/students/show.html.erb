@@ -270,7 +270,21 @@
   <strong>Description:</strong>
   <%= @student.description %>
 </p>
-<br>
+<table class="table table-bordered ">
+  <tbody >
+    <tr>
+      <th style="text-align:center;"><strong>Course Type</strong></th>
+      <th style="text-align:center;"><strong>University Name</strong></th>
+      <th style="text-align:center;"><strong>Subject</strong></th>
+    </tr>
+    <tr>
+      <td style="height: 90px; padding-top: 30px;"><%= @student.course %></td>
+      <td style="height: 90px; padding-top: 30px;"><%= @student.university %></td>
+      <td style="height: 90px; padding-top: 30px;"><%= @student.subject %></td>
+    </tr>
+  </tbody>
+</table>
+
 <%= link_to 'Edit', edit_student_path(@student) , class:'btn btn-sm btn-success' %> |
 <%= link_to 'Back', students_path , class:'btn btn-sm btn-primary' %>
 </div>
