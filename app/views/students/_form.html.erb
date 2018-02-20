@@ -25,227 +25,235 @@
       <td style="padding-right:100px; width: 400px;"><%= f.text_field :namej, class:'form-control' %></td>
       <td style="padding-right:100px; width: 400px;"><%= f.text_field :namek, class:'form-control' %></td>
     </tr>
+    <tr>
+      <th><%= f.label :nationality ,class: 'label-input' %></th>
+      <th><%= f.label :place , :value => 'Place of Birth',class: 'label-input' %></th>
+      <th><%= f.label :idcard , :value => 'Card ID' ,class: 'label-input' %></th>
+    </tr>
+    <tr>
+      <td style="padding-right:100px; width: 400px;"><%= f.text_field :nationality, class:'form-control' %></td>
+      <td style="padding-right:100px; width: 400px;"><%= f.text_field :place, class:'form-control' %></td>
+      <td style="padding-right:100px; width: 400px;"><%= f.text_field :idcard, class:'form-control' %></td>
+    </tr>
+    <tr>
+      <th><%= f.label :salary , :value => 'In Khmer Salary' ,class: 'label-input' %></th>
+      <th><%= f.label :education,class: 'label-input' %></th>
+      <th><%= f.label :dbirth , :value => 'Date of Birth' ,class: 'label-input' %></th>
+    </tr>
+    <tr>
+      <td style="padding-right:100px; width: 400px;"><%= f.text_field :salary, class:'form-control' %></td>
+      <td style="padding-right:100px; width: 400px;"><%= f.text_field :education, class:'form-control' %></td>
+      <td style="padding-right:100px; width: 400px;text-align: left;"><%= f.date_select :dbirth, :start_year => Date.current.year, :end_year => 1930, class:'form-control' %></td>
+    </tr>
+    <tr>
+      <th><%= f.label :age,class: 'label-input' %></th>
+      <th><%= f.label :sex,class: 'label-input' %></th>
+      <th><%= f.label :health, :value => 'State of Health',class: 'label-input' %></th>
+    </tr>
+    <tr>
+      <td style="padding-right:100px; width: 400px;"><%= f.number_field :age, class:'form-control' %></td>
+      <td style="padding-right:100px; width: 400px; text-align: left;">
+        <%= f.radio_button :sex, 'Male' %> 
+        <%= f.label :sex, 'Male', :value => 'Male' %>
+        <%= f.radio_button :sex, 'Female' %>
+        <%= f.label :sex, 'Female', :value => 'Female' %>
+      </td>
+      <td style="padding-right:100px; width: 400px;"><%= f.text_field :health, class:'form-control' %></td>
+    </tr>
+    <tr>
+      <th><%= f.label :blood , :value => 'Blood Type',class: 'label-input' %></th>
+      <th><%= f.label :vision ,class: 'label-input' %></th>
+      <th><%= f.label :interest ,class: 'label-input' %></th>
+    </tr>
+    <tr>
+      <td style="padding-right:100px; width: 400px;"><%= f.text_field :blood, class:'form-control' %></td>
+      <td style="padding-right:100px; width: 400px;"><%= f.text_field :vision, class:'form-control' %></td>
+      <td style="padding-right:100px; width: 400px;text-align: left;"><%= f.text_field :interest, class:'form-control' %></td>
+    </tr>
+    <tr>
+      <th><%= f.label :experience , :value => 'Year of Experience',class: 'label-input' %></th>
+      <th><%= f.label :married ,class: 'label-input' %></th>
+      <th><%= f.label :position ,class: 'label-input' %></th>
+    </tr>
+    <tr>
+      <td style="padding-right:100px; width: 400px;"><%= f.number_field :experience, class:'form-control' %></td>
+      <td style="padding-right:100px; width: 400px;"><%= f.text_field :married, class:'form-control' %></td>
+      <td style="padding-right:100px; width: 400px;text-align: left;"><%= f.text_field :position, class:'form-control' %></td>
+    </tr>
+    <tr>
+      <th><%= f.label :behavior,class: 'label-input' %></th>
+      <th><%= f.label :experiencetojapan , :value => 'Experience go to Japanese',class: 'label-input' %></th>
+      <th><%= f.label :japanesespeaking , :value => 'Japanese Conversation' ,class: 'label-input' %></th>
+    </tr>
+    <tr>
+      <td style="padding-right:100px; width: 400px;"><%= f.text_area :behavior, class:'form-control' %></td>
+      <td style="padding-right:100px; width: 400px;"><%= f.text_field :experiencetojapan, class:'form-control' %></td>
+      <td style="padding-right:100px; width: 400px;text-align: left;"><%= f.text_field :japanesespeaking, class:'form-control' %></td>
+    </tr>
+    <tr>
+      <th><%= f.label :heightweight , :value => 'Height & Weight' ,class: 'label-input' %></th>
+      <th><%= f.label :caddress ,:value => 'Current Address', class: 'label-input' %></th>
+    </tr>
+    <tr>
+       <td style="padding-right:100px; width: 400px;"><%= f.text_field :heightweight, class:'form-control' %></td>
+       <td style="padding-right:100px; width: 400px;"><%= f.text_area :caddress , placeholder: 'Current Address', class:'form-control' %></td>
+    </tr>
    </tbody>
-  </table>
-  <div class="field" >
-    <%= f.label :nationality %>
-    <%= f.text_field :nationality %>
+  </table><br><br>
+  </div>  <br><br>
+ <div><h3 style="text-align: center;"><u>Academic History Information</u></h3></div> 
+  <div>
+    <table>
+      <tbody>
+        <tr>
+          <th><%= f.label :dates , :value => 'Last Peroid of Studying' ,class: 'label-input' %></th>
+          <th><%= f.label :schoolname , :value => 'Name Of School' ,class: 'label-input' %></th>
+          <th><%= f.label :subjects , :value => 'Subjects or Major' ,class: 'label-input'%></th>
+        </tr>
+        <tr>
+          <td style="padding-right:100px; width: 400px;text-align: left;"><%= f.date_select :dates ,class: 'form_control' %></td>
+          <td style="padding-right:100px; width: 400px;"><%= f.text_field :schoolname, class:'form-control' %></td>
+          <td style="padding-right:100px; width: 400px;"><%= f.text_field :subjects, class:'form-control' %></td>
+        </tr>
+      </tbody>
+    </table>
   </div>
-  <div class="field" >
-    <%= f.label :place , :value => 'Place of Birth' %>
-    <%= f.text_field :place %>
+  <br>
+  <div>
+    <h3 style="text-align: center;"><u>Employee History Information</u></h3><br>
   </div>
-  <div class="field" >
-    <%= f.label :idcard , :value => 'Card ID' %>
-    <%= f.text_field :idcard %>
+  <div>
+    <table>
+      <tbody>
+        <tr>
+          <th><%= f.label :datess , :value => 'Last Peroid of Working',class: 'label-input' %></th>
+          <th><%= f.label :emcompany , :value => 'Company Name',class: 'label-input' %></th>
+          <th><%= f.label :positionl , :value => 'Position of Working',class: 'label-input'%></th>
+        </tr>
+        <tr>
+          <td style="padding-right:100px; width: 400px;text-align: left;"><%= f.date_select :datess ,class: 'form_control' %></td>
+          <td style="padding-right:100px; width: 400px;"><%= f.text_field :emcompany, class:'form-control' %></td>
+          <td style="padding-right:100px; width: 400px;"><%= f.text_field :positionl, class:'form-control' %></td>
+        </tr>
+      </tbody>
+    </table>
   </div>
-  <div class="field" >
-    <%= f.label :salary , :value => 'In Khmer Salary' %>
-    <%= f.text_field :salary %>
-  </div><br>
-  <div class="field">
-    <%= f.label :education %><br>
-    <%= f.text_field :education %>
-  </div>
-  <div class="field">
-    <%= f.label :dbirth , :value => 'Date of Birth'%><br>
-    <%= f.date_select :dbirth %>
-  </div>
-  <div class="field">
-    <%= f.label :age %><br>
-    <%= f.number_field :age %>
-  </div>
-  <div class="field">
-    <%= f.label :sex %><br>
-    <%= f.text_field :sex %>
-  </div>
-  <div class="field">
-    <%= f.label :health, :value => 'State of Health' %><br>
-    <%= f.text_field :health %>
-  </div>
-  <div class="field">
-    <%= f.label :blood , :value => 'Blood Type'%><br>
-    <%= f.text_field :blood %>
-  </div>
-  <div class="field">
-    <%= f.label :vision %><br>
-    <%= f.text_field :vision %>
-  </div>
-  <div class="field">
-    <%= f.label :interest %><br>
-    <%= f.text_area :interest %>
-  </div>
-  <div class="field">
-    <%= f.label :experience , :value => 'Year of Experience' %><br>
-    <%= f.number_field :experience %>
-  </div>
-  <div class="field">
-    <%= f.label :married %><br>
-    <%= f.text_field :married %>
-  </div>
-  <div class="field">
-    <%= f.label :position %><br>
-    <%= f.text_field :position %>
-  </div>
-  <div class="field">
-    <%= f.label :behavior %><br>
-    <%= f.text_area :behavior %>
-  </div>
-  <div class="field">
-    <%= f.label :experiencetojapan , :value => 'Experience go to Japanese'%><br>
-    <%= f.text_field :experiencetojapan %>
-  </div>
-  <div class="field">
-    <%= f.label :japanesespeaking , :value => 'Japanese Conversation'%><br>
-    <%= f.text_field :japanesespeaking %>
-  </div>
-  <div class="field">
-    <%= f.label :heightweight , :value => 'Height & Weight'%><br>
-    <%= f.text_field :heightweight %>
-  </div>
-  <div class="field">
-    <%= f.label :caddress %><br>
-    <%= f.text_area :caddress , placeholder: 'Current Address'%>
-  </div>
-  <h3 style="text-align: center;"><u>Academic History Information</u></h3>
-  <div class="field">
-    <%= f.label :dates , :value => 'Last Peroid of Studying'%><br>
-    <%= f.date_select :dates %>
-  </div>
-  <div class="field">
-    <%= f.label :schoolname , :value => 'Name Of School'%><br>
-    <%= f.text_field :schoolname %>
-  </div>
-  <div class="field">
-    <%= f.label :subjects , :value => 'Subjects or Major'%><br>
-    <%= f.text_field :subjects %>
-  </div>
-  <h3 style="text-align: center;"><u>Employee History Information</u></h3>
-  <div class="field">
-    <%= f.label :datess , :value => 'Last Peroid of Working' %><br>
-    <%= f.date_select :datess %>
-  </div>
-  <div class="field">
-    <%= f.label :emcompany , :value => 'Company Name'%><br>
-    <%= f.text_field :emcompany %>
-  </div>
-  <div class="field">
-    <%= f.label :positionl , :value => 'Position of Working'%><br>
-    <%= f.text_field :positionl %>
-  </div>
+  <br>
   <h3 style="text-align: center;"><u>Famaily Member Information</u></h3>
-  <div class="field">
-    <%= f.label :fathername , :value => 'Father Name '%>
-    <%= f.text_field :fathername %>
+   <div>
+    <table>
+      <tbody>
+        <tr>
+          <th><%= f.label :fathername , :value => 'Father Name', class: 'label-input' %></th>
+          <th><%= f.label :fage , :value => 'Age', class: 'label-input' %></th>
+          <th><%= f.label :fjob , :value => 'Jobs', class: 'label-input'%></th>
+        </tr>
+        <tr>
+          <td style="padding-right:100px; width: 400px;"><%= f.text_field :fathername, class:'form-control' %></td>
+          <td style="padding-right:100px; width: 400px;"><%= f.number_field :fage, class:'form-control' %></td>
+          <td style="padding-right:100px; width: 400px;"><%= f.text_field :fjob, class:'form-control' %></td>
+        </tr>
+        <tr>
+          <th><%= f.label :mathername , :value => 'Mather Name', class: 'label-input' %></th>
+        </tr>
+        <tr>
+          <td style="padding-right:100px; width: 400px;"><%= f.text_field :mathername , class:'form-control' %></td>
+          <td style="padding-right:100px; width: 400px;"><%= f.number_field :mage, class:'form-control' %></td>
+          <td style="padding-right:100px; width: 400px;"><%= f.text_field :mjob, class:'form-control' %></td>
+        </tr>
+        <tr>
+          <th><%= f.label :brothername , :value => 'Brother Name', class: 'label-input' %></th>
+        </tr>
+        <tr>
+          <td style="padding-right:100px; width: 400px;"><%= f.text_field :brothername , class:'form-control' %></td>
+          <td style="padding-right:100px; width: 400px;"><%= f.number_field :bage, class:'form-control' %></td>
+          <td style="padding-right:100px; width: 400px;"><%= f.text_field :bjob, class:'form-control' %></td>
+          
+        </tr>
+        <tr>
+          <th><%= f.label :sisname , :value => 'Sister Name', class: 'label-input' %></th>
+          
+        </tr>
+        <tr>
+          <td style="padding-right:100px; width: 400px;"><%= f.text_field :sisname , class:'form-control' %></td>
+          <td style="padding-right:100px; width: 400px;"><%= f.number_field :sage, class:'form-control' %></td>
+          <td style="padding-right:100px; width: 400px;"><%= f.text_field :sjob, class:'form-control' %></td>
+        </tr>
+        <tr>
+          <th colspan="3"><%= f.label :moreinformation , :value => 'Other Information', class: 'label-input'%></th>
+        </tr>
+        <tr>
+          <td colspan="3" style="padding-right:100px; width: 1000;"><%= f.text_area :moreinformation, class:'form-control' %></td>
+        </tr>
+      </tbody>
+    </table>
   </div>
-  <div class="field">
-    <%= f.label :fage , :value => 'Age'%>
-    <%= f.number_field :fage %>
-  </div>
-  <div class="field">
-    <%= f.label :fjob , :value => 'Jobs'%><br>
-    <%= f.text_field :fjob %>
-  </div>
-  <div class="field">
-    <%= f.label :mathername , :value => 'Mather Name'%>
-    <%= f.text_field :mathername %>
-  </div>
-  <div class="field">
-    <%= f.label :mage , :value => 'Age'%>
-    <%= f.number_field :mage %>
-  </div>
-  <div class="field">
-    <%= f.label :mjob , :value => 'Jobs'%><br>
-    <%= f.text_field :mjob %>
-  </div>
-  <div class="field">
-    <%= f.label :brothername , :value => 'Brother Name'%>
-    <%= f.text_field :brothername %>
-  </div>
-  <div class="field">
-    <%= f.label :bage , :value => 'Age' %>
-    <%= f.number_field :bage %>
-  </div>
-  <div class="field">
-    <%= f.label :bjob , :value => 'Jobs'%><br>
-    <%= f.text_field :bjob %>
-  </div>
-  <div class="field">
-    <%= f.label :sisname , :value => 'Sister Name' %>
-    <%= f.text_field :sisname %>
-  </div>
-  <div class="field">
-    <%= f.label :sage , :value => 'Age' %>
-    <%= f.text_field :sage %>
-  </div>
-  <div class="field">
-    <%= f.label :sjob , :value => 'Jobs' %><br>
-    <%= f.text_field :sjob %>
-  </div>
-  <div class="field">
-    <%= f.label :moreinformation , :value => 'Other Information'%><br>
-    <%= f.text_area :moreinformation %>
-  </div>
+  <br>
   <h3 style="text-align: center;"><u>Reason of Go to Japan</u></h3>
-  <div class="field">
-    <%= f.label :reason , :value => 'Why do you want to go to Japan' %><br>
-    <%= f.text_area :reason %>
-  </div>
+    <div>
+      <%= f.label :reason , :value => 'Why do you want to go to Japan', class: 'label-input' %><br>
+      <div style="padding-right:100px; width: 1000;"><%= f.text_area :reason, class:'form-control' %></div>
+    </div>
   <h3 style="text-align: center;"><u>When return how to arrang the money.</u></h3>
-  <div class="field">
-    <%= f.label :arrang , :value => 'What will you do when you have money from Japan.' %><br>
-    <%= f.text_area :arrang %>
-  </div>
+    <div>
+      <%= f.label :arrang , :value => 'What will you do when you have money from Japan.', class: 'label-input' %><br>
+      <div style="padding-right:100px; width: 1000;"><%= f.text_area :arrang, class:'form-control' %></div>
+    </div>
   <h3 style="text-align: center;"><u>Reference of Resume</u></h3>
-  <div class="field">
-    <%= f.label :entrydate , :value => 'Date of Entry Data' %><br>
-    <%= f.datetime_select :entrydate %>
-  </div>
-  <div class="field">
-    <%= f.label :phone , :value => 'Phone Number'%><br>
-    <%= f.text_field :phone %>
-  </div>
-  <div class="field">
-    <%= f.label :email , :value => 'Email Address'%><br>
-    <%= f.text_field :email %>
-  </div>
-  <h3 style="text-align: center;"><u>Information of Going to Japan</u></h3>
-  <div class="field">
-    <%= f.label :sendingcompany, :value => 'Sending Company Name' %><br>
-    <%= f.text_area :sendingcompany %>
-  </div>
-  <div class="field">
-    <%= f.label :japaneselevel , :value => 'Japanese Level'%><br>
-    <%= f.text_field :japaneselevel %>
-  </div>
-  <div class="field">
-    <%= f.label :workfield , :value => 'Field of Work' %><br>
-    <%= f.text_area :workfield %>
-  </div>
-  <div class="field">
-    <%= f.label :dategojapan , :value => 'Date go to Japan'%><br>
-    <%= f.date_select :dategojapan %>
-  </div>
-  <div class="field">
-    <%= f.label :prefecture %><br>
-    <%= f.text_area :prefecture %>
-  </div>
-  <div class="field">
-    <%= f.label :zipcode %><br>
-    <%= f.text_field :zipcode %>
-  </div>
-  <div class="field">
-    <%= f.label :addressjapan , :value => 'Address in Japan'%><br>
-    <%= f.text_area :addressjapan %>
-  </div>
-  <div class="field">
-    <%= f.label :adminname , :value => 'Admin Name' %><br>
-    <%= f.text_field :adminname %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </div>
+    <div>
+      <table>
+        <tbody>
+          <tr>
+            <th><%= f.label :entrydate , :value => 'Date of Entry Data',class: 'label-input' %></th>
+            <th><%= f.label :phone , :value => 'Phone Number',class: 'label-input' %></th>
+            <th><%= f.label :email , :value => 'Email Address',class: 'label-input' %></th>
+          </tr>
+          <tr>
+            <td style="padding-right:100px; width: 400px;text-align:left;"><%= f.date_select :entrydate,class:'form-control' %></td>
+            <td style="padding-right:100px; width: 400px;"><%= f.text_field :phone ,class: 'form-control' %></td>
+            <td style="padding-right:100px; width: 400px;"><%= f.text_field :email ,class: 'form-control' %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </div>
+    <h3 style="text-align: center;"><u>Information of Going to Japan</u></h3>
+    <div class="field">
+      <%= f.label :sendingcompany, :value => 'Sending Company Name' %><br>
+      <%= f.text_area :sendingcompany %>
+    </div>
+    <div class="field">
+      <%= f.label :japaneselevel , :value => 'Japanese Level'%><br>
+      <%= f.text_field :japaneselevel %>
+    </div>
+    <div class="field">
+      <%= f.label :workfield , :value => 'Field of Work' %><br>
+      <%= f.text_area :workfield %>
+    </div>
+    <div class="field">
+      <%= f.label :dategojapan , :value => 'Date go to Japan'%><br>
+      <%= f.date_select :dategojapan %>
+    </div>
+    <div class="field">
+      <%= f.label :prefecture %><br>
+      <%= f.text_area :prefecture %>
+    </div>
+    <div class="field">
+      <%= f.label :zipcode %><br>
+      <%= f.text_field :zipcode %>
+    </div>
+    <div class="field">
+      <%= f.label :addressjapan , :value => 'Address in Japan'%><br>
+      <%= f.text_area :addressjapan %>
+    </div>
+    <div class="field">
+      <%= f.label :adminname, :value => 'Admin Name' %><br>
+      <%= f.text_field :adminname %>
+    </div>
+    <div class="field">
+      <%= f.label :description %><br>
+      <%= f.text_area :description %>
+    </div>
   <h3 style="text-align: center;"><u>New Information of Student</u></h3>
   <div>
   <table>
@@ -260,12 +268,6 @@
       <td style="padding-right:100px; width: 400px;"><%= f.text_field :university, class:'form-control' %></td>
       <td style="padding-right:100px; width: 400px;"><%= f.text_field :subject, class:'form-control' %></td>
     </tr>
-   </tbody>
-  </table>
-  </div>
-  <div>
-  <table>
-    <tbody>
     <tr>
       <th><%= f.label :teacher , :value => 'Japanese Teacher',class: 'label-input' %></th>
       <th><%= f.label :dateentoll, :value => 'Start Date',class: 'label-input' %></th>
@@ -273,15 +275,9 @@
     </tr>
     <tr>
       <td style="padding-right:100px; width: 400px;"><%= f.text_field :teacher, class:'form-control' %></td>
-      <td style="padding-right:100px; width: 400px;"><%= f.date_select :dateentoll, class:'form-input' %><span class="glyphicon glyphicon-calendar btn-lg"></span></td>
-      <td style="padding-right:100px; width: 400px;"><%= f.date_select :dateend, class:'form-input' %><span class="glyphicon glyphicon-calendar btn-lg"></span></td>
+      <td style="padding-right:100px; width: 400px;text-align: left;"><%= f.date_select :dateentoll, class:'form-input' %><span class="glyphicon glyphicon-calendar btn-lg"></span></td>
+      <td style="padding-right:100px; width: 400px;text-align: left;"><%= f.date_select :dateend, class:'form-input' %><span class="glyphicon glyphicon-calendar btn-lg"></span></td>
     </tr>
-   </tbody>
-  </table>
-  </div>
-  <div>
-  <table>
-    <tbody>
     <tr>
       <th><%= f.label :textbook, :value => 'Japanese Book',class: 'label-input' %></th>
       <th><%= f.label :status, :value => 'Status of study',class: 'label-input' %></th>
@@ -303,16 +299,10 @@
       <th><%= f.label :hisinterview , :value => 'Type of Interview', class: 'label-input' %></th>
     </tr>
     <tr>
-      <td style="padding-right:100px; width: 400px;"><%= f.date_select :dateinterview, class:'form-control' %></td>
+      <td style="padding-right:100px; width: 400px;text-align: left;"><%= f.date_select :dateinterview, class:'form-control' %></td>
       <td style="padding-right:100px; width: 400px;"><%= f.text_field :campanynk, class:'form-control' %></td>
       <td style="padding-right:100px; width: 400px;"><%= f.text_field :hisinterview, class:'form-control' %></td>
     </tr>
-   </tbody>
-  </table>
-  </div>
-  <div>
-  <table>
-    <tbody>
     <tr>
       <th><%= f.label :stinterview , :value => 'Status of Interview' ,class: 'label-input' %></th>
       <th><%= f.label :jobhistory, :value => 'Job History' ,class: 'label-input' %></th>
@@ -323,19 +313,13 @@
       <td style="padding-right:100px; width: 400px;"><%= f.text_field :jobhistory, class:'form-control' %></td>
       <td style="padding-right:100px; width: 400px;"><%= f.text_field :certificate, class:'form-control' %></td>
     </tr>
-   </tbody>
-  </table>
-  </div>
-  <div>
-  <table>
-    <tbody>
     <tr>
       <th><%= f.label :japanesetype , :value => 'Level of Japanese' ,class: 'label-input' %></th>
       <th><%= f.label :attendance , :value => 'Attendance', placeholder: 'English etc...' ,class: 'label-input' %></th>
     </tr>
     <tr>
       <td style="padding-right:100px; width: 400px;"><%= f.text_field :japanesetype, class:'form-control' %></td>
-      <td style="padding-right:100px; width: 400px;"><%= f.date_select :attendance, class:'form-control' %><span class="glyphicon glyphicon-calendar btn-lg"></span></td>
+      <td style="padding-right:100px; width: 400px;text-align: left;"><%= f.date_select :attendance, class:'form-control' %><span class="glyphicon glyphicon-calendar btn-lg"></span></td>
     </tr>
   </tbody>
 </table>
@@ -373,7 +357,7 @@
       <th><%= f.label :playingtime , :value => 'Playing Time',class: 'label-input' %></th>
     </tr>
     <tr>
-      <td style="padding-right:100px; width: 400px;"><%= f.date_select :resgisterdate, class:'form-control' %><span class="glyphicon glyphicon-calendar btn-lg"></span></td>
+      <td style="padding-right:100px; width: 400px;text-align: left;"><%= f.date_select :resgisterdate, class:'form-control' %><span class="glyphicon glyphicon-calendar btn-lg"></span></td>
       <td style="padding-right:100px; width: 400px;"><%= f.text_field :score, class:'form-control' %></td>
       <td style="padding-right:100px; width: 400px;"><%= f.text_field :playingtime, class:'form-control' %></td>
     </tr>
@@ -391,11 +375,10 @@
     <tbody>
   </table>
   <br>
-  <div>
   <div class="actions">
     <%= f.submit 'Save Data Into List Of Student' , class:'btn btn-sm btn-success'%>
   </div>
-  </div>
 <% end %>
+<br>
 </div>
-<br> <br>
+<br> 
