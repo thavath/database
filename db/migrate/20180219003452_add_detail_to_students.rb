@@ -14,8 +14,8 @@ class AddDetailToStudents < ActiveRecord::Migration
     add_column :students, :certificate, :string
     add_column :students, :japanesetype, :string
     add_column :students, :valuation, :string
-    add_column :students, :attendance, :string
-    add_column :students, :resgisterdate, :string
+    add_column :students, :attendance, :date
+    add_column :students, :resgisterdate, :date
     add_column :students, :score, :decimal
     add_column :students, :playingtime, :integer
     add_column :students, :lastlearnhistory, :string
